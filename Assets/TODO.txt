@@ -1,0 +1,2 @@
+TO-DO LIST:
+- Improve the movement system. Create a path, with pathfinding algorithms, that player should move along.
