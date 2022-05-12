@@ -212,9 +212,9 @@ public abstract class EnemyBase : MonoBehaviour
     {
         anim.SetTrigger(Animator.StringToHash("die"));
         healthBarImage.gameObject.SetActive(false);
-        Destroy(this.gameObject, 3.0f);
         this.enabled = false;
         capsuleCollider.enabled = false;
+        Destroy(this.gameObject, 3.0f);
         UIManager.instance.SetCursorDefault();
     }
 
@@ -245,5 +245,5 @@ public abstract class EnemyBase : MonoBehaviour
 
     public EnemyType GetEnemyType() => enemyData.Type;
     public int GetExperienceReward() => enemyData.GetExperienceReward();
-
+    public CapsuleCollider GetCollider() => capsuleCollider;
 }

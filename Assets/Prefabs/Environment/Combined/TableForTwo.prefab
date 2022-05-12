@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5327362322349163493}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TableForTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.7111385, y: 0.7061715, z: 10.740014}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1263913364896197940}
   - {fileID: 6471352567387237613}
@@ -47,6 +48,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: mug
+      objectReference: {fileID: 0}
+    - target: {fileID: 3778440357708037550, guid: ecb7ef2bbb02207439c6d60ac781a286,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4549875670437570324, guid: ecb7ef2bbb02207439c6d60ac781a286,
         type: 3}
@@ -178,6 +184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair
       objectReference: {fileID: 0}
+    - target: {fileID: 3222573739587273425, guid: b714e12aac74c8444afc1734b239a72d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b714e12aac74c8444afc1734b239a72d, type: 3}
 --- !u!4 &1263913364896197940 stripped
@@ -253,6 +264,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3222573739587273425, guid: b714e12aac74c8444afc1734b239a72d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b714e12aac74c8444afc1734b239a72d, type: 3}
 --- !u!4 &1263913364934682158 stripped
@@ -272,6 +288,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: tableLarge
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684897842582872984, guid: 61c01dc16cccdba4189409734a9832ae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4064696287603276066, guid: 61c01dc16cccdba4189409734a9832ae,
         type: 3}
@@ -403,6 +424,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: plateHalf
       objectReference: {fileID: 0}
+    - target: {fileID: 4252282085039765768, guid: 07409842cab26564a9935ea4ea2a2336,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07409842cab26564a9935ea4ea2a2336, type: 3}
 --- !u!4 &8257761144009604083 stripped
@@ -477,6 +503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plateFull
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151689712809481029, guid: 0b14211cdb0998146aeafa56b1b2ba6d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b14211cdb0998146aeafa56b1b2ba6d, type: 3}

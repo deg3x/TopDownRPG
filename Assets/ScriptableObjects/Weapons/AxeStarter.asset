@@ -16,6 +16,6 @@ MonoBehaviour:
   damage:
     damageMin: 6
     damageMax: 7
-  range: 1
+  range: 0.1
   title: Ant Terrorizer
   modifiers: []

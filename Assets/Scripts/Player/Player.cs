@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     private EnemyBase enemyTarget;
     private GameObject latestClickEffect;
     private Camera mainCamera;
+    private CapsuleCollider capsuleCollider;
 
     private void Start()
     {
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
         mouseClickedTime = 0f;
         pointToMove = transform.forward;
         anim = GetComponent<Animator>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
         enemyTarget = null;
 
         playerData = new PlayerData();
@@ -93,7 +95,7 @@ public class Player : MonoBehaviour
         float distanceToStop = movementPrecision;
         if (enemyTarget != null)
         {
-            distanceToStop += playerData.GetAttackRange();
+            distanceToStop += playerData.GetAttackRange() + enemyTarget.GetCollider().radius + capsuleCollider.radius;
         }
 
         if(Vector3.Distance(transform.position, pointToMove) < distanceToStop)
@@ -139,7 +141,8 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if (Vector3.Distance(enemyTarget.transform.position, transform.position) <= movementPrecision + playerData.GetAttackRange() + enemyDistanceForgiveness)
+        float attackDistance = enemyTarget.GetCollider().radius + capsuleCollider.radius + movementPrecision + enemyDistanceForgiveness + playerData.GetAttackRange();
+        if (Vector3.Distance(enemyTarget.transform.position, transform.position) <= attackDistance)
         {
             return;
         }
