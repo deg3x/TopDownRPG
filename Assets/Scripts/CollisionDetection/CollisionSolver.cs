@@ -8,13 +8,13 @@ public class CollisionSolver : MonoBehaviour
     private CapsuleCollider col;
     private Collider[] collidersOverlap;
 
-    void Start()
+    private void Start()
     {
         collidersOverlap = new Collider[64];
         col = GetComponent<CapsuleCollider>();
     }
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         Vector3 capsuleStart = transform.TransformPoint(col.center - (col.height * 0.5f - col.radius) * Vector3.up);
         Vector3 capsuleEnd = transform.TransformPoint(col.center + (col.height * 0.5f - col.radius) * Vector3.up);
