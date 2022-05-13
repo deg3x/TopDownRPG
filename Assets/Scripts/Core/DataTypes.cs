@@ -16,6 +16,13 @@ public enum EnemyType
     SkeletonArcher
 }
 
+public enum ItemType
+{
+    Weapon,
+    Equipment,
+    Consumable
+}
+
 public enum WeaponType
 {
     Melee,
