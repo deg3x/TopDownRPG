@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2217183005674659051}
   - component: {fileID: 4116839246773725217}
   - component: {fileID: 9210459600502591648}
+  - component: {fileID: 1309403679}
   m_Layer: 11
   m_Name: door_gate
   m_TagString: Environment
@@ -64,6 +65,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: -1580535799172915004, guid: bc4847c72da86fb4bb1f68344a621184, type: 3}
   - {fileID: 6694312389017904013, guid: bc4847c72da86fb4bb1f68344a621184, type: 3}
+  - {fileID: 2100000, guid: c1b1e691ab18cbf4298c73447392f4a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,6 +100,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0000002, y: 2.54, z: 0.2726636}
   m_Center: {x: -0.99999994, y: 0.18836975, z: 0.036331706}
+--- !u!114 &1309403679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2459263413922695668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75228b1159694aa42b50d88dda57c1cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMaterial: {fileID: 2100000, guid: c1b1e691ab18cbf4298c73447392f4a5, type: 2}
 --- !u!1 &7714261550318859490
 GameObject:
   m_ObjectHideFlags: 0
