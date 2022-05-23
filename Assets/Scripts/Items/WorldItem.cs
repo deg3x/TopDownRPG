@@ -8,23 +8,23 @@ public class WorldItem : MonoBehaviour
     [SerializeField] private Item itemData;
     [SerializeField] private Material outlineMaterial;
 
+    private MeshRenderer meshRenderer;
+
     private void Start()
     {
-
+        meshRenderer = GetComponent<MeshRenderer>();
     }
 
-    private void Update()
-    {
-        
-    }
-
+    // Setting material variables with manual indexing is dirty and I should be ashamed
     private void OnMouseEnter()
     {
-        outlineMaterial.SetFloat(Shader.PropertyToID("_OutlineEnabled"), 1.0f);
+        meshRenderer.materials[2].SetFloat(Shader.PropertyToID("_OutlineEnabled"), 1.0f);
+        UIManager.instance.ActivateItemPopup(transform.position, itemData.title, itemData.description);
     }
 
     private void OnMouseExit()
     {
-        outlineMaterial.SetFloat(Shader.PropertyToID("_OutlineEnabled"), 0.0f);
+        meshRenderer.materials[2].SetFloat(Shader.PropertyToID("_OutlineEnabled"), 0.0f);
+        UIManager.instance.DeactivateItemPopup();
     }
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BareBone
   m_EditorClassIdentifier: 
   title: Skeleton Rib
-  description: 
+  description: Definitely not the most dangerous weapon you can find...
   type: 0
   damage:
     damageMin: 1

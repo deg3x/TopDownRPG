@@ -27,7 +27,11 @@ public class UIManager : MonoBehaviour
     public Texture2D defaultCursor;
     public Texture2D onEnemyCursor;
 
-    [Header("UI References")]
+    [Header("Item UI References")]
+    [SerializeField]
+    private UIItemDescriptionPopup itemDescriptionPanel;
+
+    [Header("Player UI References")]
     [SerializeField] 
     private Text healthText;
     [SerializeField]
@@ -226,5 +230,15 @@ public class UIManager : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
+    public void ActivateItemPopup(Vector3 itemWorldPosition, string itemTitle, string itemDescription)
+    {
+        itemDescriptionPanel.ActivateDescriptionPopup(itemWorldPosition, itemTitle, itemDescription);
+    }
+
+    public void DeactivateItemPopup()
+    {
+        itemDescriptionPanel.DeactivateDesctiptionPopup();
     }
 }
